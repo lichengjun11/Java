@@ -39,7 +39,7 @@ public class _2DArray {
                 };
         for (int i = 0; i < doubles.length; i++) {
             for (int j = 0; j < doubles[i].length; j++) {
-                System.out.println(doubles[i] + "\t");
+                System.out.println(doubles[i][j] + "\t");
             }
             System.out.println();
         }
