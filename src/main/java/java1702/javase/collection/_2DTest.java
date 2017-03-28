@@ -13,7 +13,7 @@ private static final String[] COLOR = {"红","黄","绿","青","蓝"};
                 string1[i][j] = COLOR[(int)(Math.random()*5)];//产生随机数
                 System.out.print(string1[i][j] +"\t");
             }
-
+    
             System.out.println();
         }
 
