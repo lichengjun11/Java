@@ -6,14 +6,11 @@ package java1702.javase.collection;
  */
 public class _2DArray {
     public static void main(String[] args) {
-
-//        int[][] ints = new int[8][9];
-//        for (int i = 0; i < 8; i++) {
-//            for (int j = 0; j < 9; j++) {
-//                ints[i][j] = i + j;
-//                System.out.print(ints[i][j] + "\t");
+//        int[][] ints = new int[3][5];
+//        for (int i = 0; i < 3; i++) {
+//            for (int j = 0; j < 5; j++) {
+//                System.out.println(ints[i][j]);
 //            }
-//            System.out.println();
 //        }
 
         int[][] ints = new int[5][7];

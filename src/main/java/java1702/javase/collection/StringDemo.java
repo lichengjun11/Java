@@ -26,7 +26,8 @@ public class StringDemo {
         System.out.println(str.toLowerCase());
         System.out.println(str.toUpperCase());
 
-
+        String s4 = "альянскийитальянскийитальянски";
+      System.out.println(s4.charAt(s4.length()-2));
 
     }
 }
