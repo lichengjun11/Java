@@ -26,6 +26,11 @@ public class StringTest {
             System.out.println(s.trim());
 
             System.out.println(string.valueOf(true));
+
+            String s1 = "hello";
+            String s2 = new String(s1);
+            System.out.println(s1);
+            System.out.println(s2);
         }
     }
 }
