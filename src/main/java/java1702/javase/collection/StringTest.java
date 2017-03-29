@@ -31,6 +31,7 @@ public class StringTest {
             String s2 = new String(s1);
             System.out.println(s1);
             System.out.println(s2);
+            System.out.println(s1.equals(s2));
         }
     }
 }
