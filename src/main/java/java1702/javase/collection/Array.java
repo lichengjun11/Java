@@ -22,14 +22,18 @@ public class Array {
         System.out.println(ints[5]);
         
         double[] doubles = new double[100];
-        for (int i = 0; i <= doubles.length; i++) {
+        for (int i = 0; i < doubles.length; i++) {
             System.out.println(i);
-
-            for (double aDouble : doubles) {
-                System.out.println(doubles);
-            }
-            
         }
+        System.out.println("--->" + doubles[doubles.length-1]);
+        for (int i = 0; i < doubles.length; i++) {
+//            System.out.println(doubles[i]);
+
+        }
+        Array[] arrays = {new Array(),new Array(),new Array(),new Array()};
+        arrays[0] = new Array();
+        System.out.println(arrays[0]);
+        System.out.println(arrays.length);
 
     }
-}
+    }
