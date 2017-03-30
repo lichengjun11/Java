@@ -1,5 +1,7 @@
 package java1702.javase.exercise;
 
+import java.util.Arrays;
+
 /**
  * Created by Li chengjun
  * on 2017/3/30 9:04.
@@ -23,9 +25,7 @@ public class E33 {
             }
 
         }
-        for (int i : array7) {
-            System.out.println(i);
-        }
+        System.out.println(Arrays.toString(array7));
         //i 代表行
             // i 代表列数
 
