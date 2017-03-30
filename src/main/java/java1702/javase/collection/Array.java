@@ -16,7 +16,10 @@ public class Array {
 
         boolean[] booleans = new boolean[345];
         booleans[0] = true;
-        System.out.println(booleans[99]);
+        System.out.println(booleans[0]);
+
+        int[] ints = {12,23,23,43,54,6,76,565,4,43,23};
+        System.out.println(ints[5]);
 
     }
 }
