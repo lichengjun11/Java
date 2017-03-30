@@ -14,5 +14,9 @@ public class Array {
         strings[4] = "very 4";
         System.out.println(strings[3]);
 
+        boolean[] booleans = new boolean[345];
+        booleans[0] = true;
+        System.out.println(booleans[99]);
+
     }
 }
