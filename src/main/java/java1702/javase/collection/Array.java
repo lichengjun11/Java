@@ -40,6 +40,8 @@ public class Array {
             String month = months[i];
             System.out.println(month);
         }
-
+        for (String month : months) {
+            System.out.println(month);
+        }
     }
     }
