@@ -15,13 +15,13 @@ public class E33 {
         int[] array5 = {1,4,6,4,1};
         int[] array6 = {1,5,10,10,5,1};
         int[] array7 = new int[7];
-        for (int i = 0; i < array7.length; i++) {
-            if (i==0 || i==array7.length-1) {
+        for (int i = 0; i < array7.length; i++){  //i 代表行
+            if (i==0 || i==array7.length-1)  {    // i 代表列数
                 array7[i] = 1;
             } else {
                 array7[i] = array6[i-1]+array6[i];
-            }
-        }
+            }//假如i = 2，第五行的第二列 = 第四行第二列的前一列数+ 第四行的第二列的数字
+        }  // i- 1 代表第几列的前一列数字
         for (int i : array7) {
             System.out.println(i);
         }
