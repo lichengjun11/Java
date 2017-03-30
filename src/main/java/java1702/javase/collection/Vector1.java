@@ -26,11 +26,14 @@ public class Vector1 {
         Vector<Integer> integers = new Vector<>();
         integers.add(32);
         integers.add(345);
+        integers.add(355);
+        integers.add(675);
         integers.add(333);
         System.out.println(integers.size());
         System.out.println(integers.capacity());
         integers.setElementAt(66,0);  // 修改;
         integers.set(1,423); // 修改
+            System.out.println( integers.set(1,111111));// 修改
         for (Integer integer : integers) {
             System.out.println(integer);
         }
