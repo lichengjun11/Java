@@ -43,5 +43,8 @@ public class Array {
         for (String month : months) {
             System.out.println(month);
         }
+
+        int[] monthDays = {31,28};
+        System.out.println(monthDays[0]);
     }
     }
