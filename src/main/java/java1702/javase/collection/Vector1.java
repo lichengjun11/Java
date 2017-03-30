@@ -30,5 +30,9 @@ public class Vector1 {
         System.out.println(integers.size());
         System.out.println(integers.capacity());
         integers.setElementAt(66,0);  // 修改;
+        integers.set(1,423); // 修改
+        for (Integer integer : integers) {
+            System.out.println(integer);
+        }
     }
 }
