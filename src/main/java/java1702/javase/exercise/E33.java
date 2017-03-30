@@ -11,19 +11,19 @@ public class E33 {
         int[] array1 = {1};
         int[] array2 = {1,1};
         int[] array3 = {1,2,1};
-        int[] array4 = {1,3,3,1};
+//        int[] array4 = {1,3,3,1};
         int[] array5 = {1,4,6,4,1};
 
-            int[] array6 = new int[6];
-        for (int i = 0; i < array6.length; i++) {
-            if (i == 0||i == array6.length-1) {
-                array6[i] = 1;
+            int[] array4 = new int[4];
+        for (int i = 0; i < array4.length; i++) {
+            if (i == 0||i == array4.length-1) {
+                array4[i] = 1;
             } else {
-                array6[i] = array5[i-1]+array5[i];
+                array4[i] = array3[i-1]+array3[i];
             }
 
         }
-        for (int i : array6) {
+        for (int i : array4) {
             System.out.println(i);
         }
     }
