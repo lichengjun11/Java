@@ -24,6 +24,10 @@ public class Array {
         double[] doubles = new double[100];
         for (int i = 0; i <= doubles.length; i++) {
             System.out.println(i);
+
+            for (double aDouble : doubles) {
+                System.out.println(doubles);
+            }
             
         }
 
