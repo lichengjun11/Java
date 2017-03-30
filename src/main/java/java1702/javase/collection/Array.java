@@ -32,8 +32,14 @@ public class Array {
         }
         Array[] arrays = {new Array(),new Array(),new Array(),new Array()};
         arrays[0] = new Array();
-        System.out.println(arrays[0]);
+        System.out.println(arrays);
         System.out.println(arrays.length);
+
+        String[] months = {"Jan","Feb","Mar","Apr","May"};
+        for (int i = 0; i < months.length; i++) {
+            String month = months[i];
+            System.out.println(month);
+        }
 
     }
     }
