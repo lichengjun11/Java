@@ -6,25 +6,13 @@ package java1702.javase.collection;
  */
 public class Array {
     public static void main(String[] args) {
-        String[] strings;
-        strings= new String[5];
-        strings[0] = "test..";
-        System.out.println(strings[2]);
-
-        boolean[] booleans = new boolean[100];
-        System.out.println(booleans[89]);
-
-            int[] ints = {12,34,24,355,6577,789,567,666};
-        System.out.println(ints[2]);
-
-        double[] doubles = new double[19990];
-        System.out.println(doubles.length);
-
-        Array[] arrays = { new Array(),new Array(),new Array()};
-
-        System.out.println(arrays[0]);
-        System.out.println(arrays[1]);
-        System.out.println(arrays[2]);
+        String[] strings = new String[5];
+        strings[0] = "good 0";
+        strings[1] = "good 1";
+        strings[2] = "good 2";
+        strings[3] = "good 3";
+        strings[4] = "very 4";
+        System.out.println(strings[3]);
 
     }
 }
