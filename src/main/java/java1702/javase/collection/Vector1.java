@@ -1,5 +1,7 @@
 package java1702.javase.collection;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Vector;
 
 /**
@@ -37,5 +39,11 @@ public class Vector1 {
         for (Integer integer : integers) {
             System.out.println(integer);
         }
+        Set<String> strings = new HashSet<>();
+        strings.add("a");
+        strings.add("ab");
+        strings.add("abc");
+        strings.add("abcd");
+        System.out.println(strings.size());
     }
 }
