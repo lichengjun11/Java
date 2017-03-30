@@ -20,6 +20,12 @@ public class Array {
 
         int[] ints = {12,23,23,43,54,6,76,565,4,43,23};
         System.out.println(ints[5]);
+        
+        double[] doubles = new double[100];
+        for (int i = 0; i <= doubles.length; i++) {
+            System.out.println(i);
+            
+        }
 
     }
 }
