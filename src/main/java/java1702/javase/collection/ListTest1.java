@@ -25,11 +25,17 @@ public class ListTest1 {
         System.out.println(list.toString());
 
         Object[] objects = list.toArray();
-        list.add("hello11");
+        list.add("hello");
         System.out.println(list.size());
         System.out.println(list);
-
-
+        System.out.println("----------");
+        ArrayList<String> strings1 = new ArrayList<>();
+        strings1.add("hello");
+        strings1.add("hi");
+        strings1.add("lilili");
+        list.removeAll(strings1);
+        System.out.println(list.size());
+        System.out.println(list);
     }
 
 }
