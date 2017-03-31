@@ -28,14 +28,14 @@ public class ListTest extends Array{
         System.out.println(arrayList.set(1,"test"));
         System.out.println(arrayList.isEmpty());
 //        arrayList.clear();
+        arrayList.ensureCapacity(20);
+        arrayList.trimToSize();
         System.out.println(arrayList.isEmpty());
         System.out.println("--->" + arrayList);
         Object[] objects = arrayList.toArray();
 
-        ListTest listTest  =new ListTest();
-        for (int i = 0; i < 10; i++) {
-//            listTest.add("" +i);
+
         }
 
     }
-}
+
