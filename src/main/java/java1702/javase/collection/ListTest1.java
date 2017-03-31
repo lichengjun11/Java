@@ -15,6 +15,11 @@ public class ListTest1 {
     list.add("hello");
         System.out.println(list.size());
         System.out.println(list.get(0));
+        System.out.println(list.contains("teat"));
+        System.out.println(list.indexOf("hello"));
+        System.out.println(list.lastIndexOf("hello"));
+
+        System.out.println(list.isEmpty());
 
     }
 
