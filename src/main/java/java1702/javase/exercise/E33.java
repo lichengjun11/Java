@@ -10,11 +10,11 @@ import java.util.Arrays;
 //杨辉三角形
 public class E33 {
     public static void main(String[] args) {
-        int[] array1 = {1};
-        int[] array2 = {1,1};
-        int[] array3 = {1,2,1};
-        int[] array4 = {1,3,3,1};
-        int[] array5 = {1,4,6,4,1};
+//        int[] array1 = {1};
+//        int[] array2 = {1,1};
+//        int[] array3 = {1,2,1};
+//        int[] array4 = {1,3,3,1};
+//        int[] array5 = {1,4,6,4,1};
         int[] array6 = {1,5,10,10,5,1};
         int[] array7 = new int[7];
         for (int i = 0; i < array7.length; i++) {
