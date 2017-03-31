@@ -24,6 +24,12 @@ public class ListTest1 {
         System.out.println(list.set(1,"lilili"));
         System.out.println(list.toString());
 
+        Object[] objects = list.toArray();
+        list.add("hello11");
+        System.out.println(list.size());
+        System.out.println(list);
+
+
     }
 
 }
