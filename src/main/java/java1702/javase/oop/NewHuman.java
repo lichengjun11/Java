@@ -28,4 +28,7 @@ public class NewHuman {
     public static void main(String[] args) {
 
     }
+    public int sleep(boolean isPlayGame) {
+        return isPlayGame ? 1:8;
+    }
 }
