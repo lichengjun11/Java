@@ -29,6 +29,9 @@ public class NewHuman {
 
     }
     public int sleep(boolean isPlayGame) {
-        return isPlayGame ? 1:8;
+        if (isPlayGame) {
+            return 1;
+        }
+        return 8;
     }
 }
