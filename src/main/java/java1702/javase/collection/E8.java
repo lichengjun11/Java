@@ -9,15 +9,18 @@ import java.util.Scanner;
  */
 public class E8 {
     public static void main(String[] args){
-        int[] srcArray = {1, 2, 3, 4, 5, 6};
-        int[] destArray = new int[6];
-
-        // src - source 源\ [sɔːs]
-        // dest - destination 目的地\ [,destɪ'neɪʃ\(ə\)n]
-        System.out.println(Arrays.toString(srcArray));
-        System.arraycopy(srcArray, 1, destArray, 3, 1);
-        System.out.println(Arrays.toString(destArray));
-
+   int[] ints = {3,4,6};
+   int chengji = 1;
+        System.out.println("一维数组中各元素的乘积是：");
+        for (int i = 0; i < 3; i++) {
+            if (i == 2) {
+                System.out.print(ints[i]+"=");
+            } else {
+                System.out.print(ints[i]+"*");
+            }
+            chengji = chengji*ints[i];
+        }
+        System.out.println(chengji);
         }
 
 }
