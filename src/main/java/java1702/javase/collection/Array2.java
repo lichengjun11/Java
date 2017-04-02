@@ -4,6 +4,7 @@ package java1702.javase.collection;
  * Created by Li chengjun
  * on 2017/4/2 12:54.
  */
+//  求出元素之和
 public class Array2 {
     public static void main(String[] args) {
         int[] num = {1,2,3,4,5,6,7,8,9,10};//创建并初始化一维数组 num
