@@ -30,6 +30,6 @@ class JiCheng {
         Student2 student2 = new Student2("王飞",30);
         Person2 person2 = new Person2("李非",33);
         System.out.println("name="+student2.name+"..."+"age="+student2.age);
-
+        System.out.println("name="+person2.name+"..."+"age="+person2.age);
     }
 }
