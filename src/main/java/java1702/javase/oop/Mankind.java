@@ -8,12 +8,12 @@ public class Mankind {
     private static final int ONE_TWO_THREE = 123;//常量
 
     public Mankind(String name) {
-        System.out.println(name+"constructor...");
+        System.out.println(name);
     }
     static{
         System.out.println("static block...");
     }
-    String name;
+   static String name;
     static String earth;
 }
 class newTest{
@@ -24,15 +24,15 @@ class newTest{
         newTest.i = 456;
         boolean b;
         Mankind tom = new Mankind("Tom");
-        tom.name = "Tom";
+        Mankind.name = "Tom";
         Mankind.earth= "Tom种了一棵树";
-        System.out.println(tom.name);
-        System.out.println(tom.earth);
+        System.out.println(Mankind.name);
+        System.out.println(Mankind.earth);
 
         Mankind jerry = new Mankind("Jerry");
-        jerry.name = "Jerry";
-        Mankind.earth ="Jerry 没有种树";
-        System.out.println(jerry.earth);
+        Mankind.name = "Jerry";
+//        Mankind.earth ="Jerry 没有种树";
+        System.out.println(Mankind.earth);
 
         System.out.println(Math.pow(2,31));
 
