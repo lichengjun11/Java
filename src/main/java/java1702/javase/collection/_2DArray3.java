@@ -16,6 +16,7 @@ public class _2DArray3 {
         }
                 System.out.println(strings[strings.length-1][strings[strings.length-1].length-1]);//输出最后一个数
         System.out.println(Arrays.toString(new int[]{100,345}));
+        System.out.println(Arrays.deepToString(strings));
             }
 
         }
