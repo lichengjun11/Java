@@ -19,5 +19,6 @@ public final class FinalTest {
 
     public static void main(String[] args) {
         FinalTest finalTest = new FinalTest(5);
+
     }
 }
