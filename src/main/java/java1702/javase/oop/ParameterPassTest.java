@@ -1,5 +1,7 @@
 package java1702.javase.oop;
 
+import java.security.PublicKey;
+
 /**
  * Created by Li chengjun
  * on 2017/4/7 8:58.
@@ -7,26 +9,32 @@ package java1702.javase.oop;
 
 // 参数传递
 public class ParameterPassTest {
-    private static void test(String a) {
-        System.out.println("b:"+a);
-        a = "hi";
-        System.out.println("c:"+ a);
+    private String s;
+    public static void test(ParameterPassTest x) {
+        System.out.println("b:"+ x.s);
+        x.s = "hello";
+        System.out.println("c:" + x.s);
     }
     public static void main(String[] args) {
-        String s = "hello";
-        System.out.println("a:"+ s);
-        test(s);
-        System.out.println("d:"+ s);
+    ParameterPassTest parameterPassTest = new ParameterPassTest();
+        System.out.println("a:"+ parameterPassTest.s);
+        test(parameterPassTest);
+        System.out.println("d:"+ parameterPassTest.s);
     }
-//    private static void test(boolean b) {
-//        System.out.println("b:"+ b);
-//        b = true;
-//        System.out.println("c:"+ b);
+
+
+
+
+//    private static void test(String a) {
+//        System.out.println("b:"+a);
+//        a = "hi";
+//        System.out.println("c:"+ a);
 //    }
 //    public static void main(String[] args) {
-//        boolean c = false;
-//        System.out.println("a:"+c);
-//        test(c);
-//        System.out.println("d:"+ c);
+//        String s = "hello";
+//        System.out.println("a:"+ s);
+//        test(s);
+//        System.out.println("d:"+ s);
 //    }
+
 }
