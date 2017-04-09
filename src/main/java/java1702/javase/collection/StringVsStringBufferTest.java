@@ -4,6 +4,7 @@ package java1702.javase.collection;
  * Created by Li chengjun
  * on 2017/3/29 10:53.
  */
+// 字符串与字符串缓冲区的比较
 public class StringVsStringBufferTest {
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     public static void main(String[] args) {
