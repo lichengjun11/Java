@@ -5,17 +5,18 @@ package java1702.javase.collection;
  * on 2017/3/29 10:53.
  */
 public class StringVsStringBufferTest {
-    private static final String ALPHABET ="abcdefghijklmnopqistuvwxyz";
+    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
     public static void main(String[] args) {
-        String s = "";
+//        String s = "";
         StringBuffer stringBuffer = new StringBuffer("");
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 200; i++) {
 //            s += ALPHABET;
-//            StringBuffer.append(ALPHABET);
+            stringBuffer.append(ALPHABET);
         }
-        System.out.println("time:"+(System.currentTimeMillis()-start));
-        System.out.println(s.length());
+//            System.out.println(s.length());
         System.out.println(stringBuffer.length());
+            System.out.println("time:"+(System.currentTimeMillis()-start));
+
     }
 }
