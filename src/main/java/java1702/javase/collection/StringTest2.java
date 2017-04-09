@@ -37,7 +37,8 @@ public class StringTest2 {
                 for (String string : strings) {
                     System.out.println(string); //  拆分字符串
 
-                    System.out.println(s7.substring(s.indexOf("l"),s.indexOf("l")+3));
+                    System.out.println(s7.substring(s.indexOf("l"),s.indexOf("l")+3));// 提取一个子字符串
+                    System.out.println(String.valueOf(1.223));// 把其他类型的转换为字符串
                 }
             }
         }
