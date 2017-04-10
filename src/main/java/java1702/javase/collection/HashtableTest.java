@@ -33,6 +33,11 @@ public class HashtableTest {
             for (Map.Entry<Integer, String> integerStringEntry : hashtable.entrySet()) {
                 System.out.println(integerStringEntry.getKey() +"--->"+ integerStringEntry.getValue());  // 获取键和值的集合
             }
+
+            System.out.println(hashtable.toString());
+            System.out.println(hashtable.containsKey(2));
+            System.out.println(hashtable.containsValue("ww"));
+            System.out.println(hashtable.contains(7));
         }
 
     }
