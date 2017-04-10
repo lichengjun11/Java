@@ -13,6 +13,11 @@ public class ArrayListTest {
         List<String> list = new ArrayList<>();
         list.add("hi");
         list.add("hello");
+        list.add("good");
+        list.add("very");
+        list.add("qwe");
+//        System.out.println(list.addAll(0,list));
+
 
         for (String s : list) {
             System.out.println(s);
@@ -20,6 +25,11 @@ public class ArrayListTest {
 
         System.out.println(list.get(1));
         System.out.println(list.contains("hi"));
+//        list.clear();
+        System.out.println(list.size());
+
+
+
 
     }
 }
