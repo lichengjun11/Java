@@ -1,6 +1,7 @@
 package java1702.javase.collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -15,11 +16,18 @@ public class StudentTest1 {
         students.add(new Student("张三",17,'M'));
         students.add(new Student("李四",18,'F'));
 
-        for (Student student : students) {
-            System.out.println(student.getAge());
-            System.out.println(student.getName());
-            System.out.println(student.getGender());
+        Iterator<Student> iterator = students.iterator();
+        while (iterator.hasNext()) {
+            Student next = iterator.next();
+        System.out.println(next.getAge());
+        System.out.println(next.getName());
+        System.out.println(next.getGender());
         }
+//        for (Student student : students) {
+//            System.out.println(student.getAge());
+//            System.out.println(student.getName());
+//            System.out.println(student.getGender());
+//        }
 
     }
 }
