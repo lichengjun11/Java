@@ -11,8 +11,40 @@ import java.util.List;
   //  Hashtable 中，并利用迭代器 Iterator 将姓名，年龄，性别打印出来
 public class StudentTest1 {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student("张三",17,'M'));
+        students.add(new Student("李四",18,'F'));
 
+        for (Student student : students) {
+            System.out.println(student.getAge());
+            System.out.println(student.getName());
+            System.out.println(student.getGender());
+        }
 
+    }
+}
+
+class Student {
+    private String name;
+    private int age;
+    private char gender;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public Student(String name, int age, char gender) {
+
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 }
