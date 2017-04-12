@@ -25,6 +25,7 @@ public class A2 {
         hashMap.put("Jack",1200);
         hashMap.remove("Tom");
         hashMap.put("Jack",1500);
+        System.out.println("------");
         for (String s : hashMap.keySet()) {
             System.out.println(s + "-->" + hashMap.get(s));
         }
@@ -46,7 +47,12 @@ public class A2 {
             System.out.println(entry.getKey() + "的工资是:" + entry.getValue());
         }
 
-
+        for (String s : hashMap.keySet()) {
+            if(hashMap.get(s) < 1000){
+                hashMap.put(s,(int) (hashMap.get(s) * 1.2));
+            }
+        }
+        System.out.println(hashMap);
         }
     }
 
