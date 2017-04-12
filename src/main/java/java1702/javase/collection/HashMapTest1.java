@@ -1,6 +1,7 @@
 package java1702.javase.collection;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  * Created by Li chengjun
@@ -22,5 +23,12 @@ public class HashMapTest1 {
         map.remove("cn");
         System.out.println(map.containsKey("cn"));
 
+        // 使用iterator遍历HashMap
+        Iterator iterator = map.keySet().iterator();
+        while (iterator.hasNext()) {
+            Object next = iterator.next();
+            System.out.println(next);
+            System.out.println(map.get(next));
+        }
     }
 }
