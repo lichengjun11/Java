@@ -11,13 +11,14 @@ public class ArrayListLinkedList {
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<>();
         LinkedList<String> linkedList = new LinkedList<>();
-        //运行时  totalmemory 总共的内存空间   freememory  空闲的内存空间
+        //运行时  totalMemory 总共的内存空间   freeMemory  空闲的内存空间
        long m1 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         System.out.println(m1);
         for (int i = 0; i < 10000; i++) {
             arrayList.add( i+"");
             linkedList.add(i + "");
         }
+        // 总共的空间减去空闲的。就是已经占用的
         long m2 = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
         System.out.println(m2);
         System.out.println((m2-m1)/1024/1024);
