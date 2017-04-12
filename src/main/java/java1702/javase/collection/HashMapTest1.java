@@ -25,6 +25,7 @@ public class HashMapTest1 {
 
         // 使用iterator遍历HashMap
         Iterator iterator = map.keySet().iterator();
+        // Map.ketSet() 返回的是一个set，set上面有iterable接口
         while (iterator.hasNext()) {
             Object next = iterator.next();
             System.out.println(next);
