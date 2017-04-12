@@ -15,7 +15,7 @@ public class TreeMapTest {
         map.put("bc",4);
         map.put("bde",8);
         map.put("bde",6);
-
+        map.put("qqw",null);
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey()+"-->"+ entry.getValue());
         }
