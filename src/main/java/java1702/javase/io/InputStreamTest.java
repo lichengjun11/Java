@@ -1,4 +1,4 @@
-package java1702.javase.exception;
+package java1702.javase.io;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
