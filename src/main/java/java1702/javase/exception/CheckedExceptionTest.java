@@ -13,14 +13,19 @@ import java.util.Scanner;
 // 抽取方法快捷键  ctrl + alt + m
 public class CheckedExceptionTest {
     public static void main(String[] args) {
+        test();
+
+    }
+
+    private static void test() {
         System.out.println("input a file name:");
         Scanner scanner = new Scanner(System.in);
         String filename = scanner.nextLine();
         try {
             RandomAccessFile randomAccessFile = new RandomAccessFile(filename,"r");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("file not found!");
+            test();  // 递归  再来调用test方法
         }
-        System.out.println("test..");
     }
 }
