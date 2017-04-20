@@ -11,16 +11,16 @@ import java.io.Reader;
  */
 public class ReaderTest {
     public static void main(String[] args) {
-    try{
-        Reader reader = new FileReader("test1");
-        int i;
-        while((i=reader.read()) != -1){
-            System.out.print((char)i);
+        try {
+            Reader reader = new FileReader("test1");
+            int i;
+            while((i = reader.read())!= -1){
+                System.out.print((char)i);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
     }
 }
