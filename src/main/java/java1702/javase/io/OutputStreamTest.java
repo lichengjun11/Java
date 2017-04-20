@@ -9,6 +9,7 @@ import java.io.OutputStream;
  * Created by Li chengjun
  * on 2017/4/20 8:19.
  */
+//  jdk1.7之后出的新写法，会自动隐式调用close
 public class OutputStreamTest {
     public static void main(String[] args) {
         try ( OutputStream outputStream = new FileOutputStream("new1")){
