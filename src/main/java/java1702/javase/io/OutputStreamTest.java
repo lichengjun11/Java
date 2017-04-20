@@ -11,21 +11,32 @@ import java.io.OutputStream;
  */
 public class OutputStreamTest {
     public static void main(String[] args) {
-        OutputStream outputStream= null;
-        try {
-            outputStream = new FileOutputStream("new");
-            outputStream.write(97);
-            outputStream.flush();
-        } catch (java.io.IOException e) {
+        try ( OutputStream outputStream = new FileOutputStream("new1")){
+           outputStream.write(97);
+           outputStream.write(98);
+           outputStream.write(99);
+           outputStream.write(100);
+           outputStream.flush();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        }finally {
-            if(outputStream!= null){
-                try {
-                    outputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+//        OutputStream outputStream= null;
+//        try {
+//            outputStream = new FileOutputStream("new");
+//            outputStream.write(97);
+//            outputStream.flush();
+//        } catch (java.io.IOException e) {
+//            e.printStackTrace();
+//        }finally {
+//            if(outputStream!= null){
+//                try {
+//                    outputStream.close();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
     }
 }
