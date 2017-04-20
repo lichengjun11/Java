@@ -2,6 +2,7 @@ package java1702.javase.io;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 
 /**
@@ -10,12 +11,21 @@ import java.io.OutputStream;
  */
 public class OutputStreamTest {
     public static void main(String[] args) {
+        OutputStream outputStream= null;
         try {
-            OutputStream outputStream = new FileOutputStream("new");
+            outputStream = new FileOutputStream("new");
             outputStream.write(97);
             outputStream.flush();
         } catch (java.io.IOException e) {
             e.printStackTrace();
+        }finally {
+            if(outputStream!= null){
+                try {
+                    outputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
