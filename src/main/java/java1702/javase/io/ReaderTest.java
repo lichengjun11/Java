@@ -15,8 +15,8 @@ public class ReaderTest {
         try {
             reader = new FileReader("test1");
             int i;
-            while((i = reader.read())!= -1){
-                System.out.print((char)i);
+            while ((i = reader.read()) != -1) {
+                System.out.println((char) i);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
