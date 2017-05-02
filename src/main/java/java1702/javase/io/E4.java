@@ -11,6 +11,9 @@ import java.util.List;
  * Created by Li chengjun
  * on 2017/4/27 10:19.
  */
+//  编写一个程序实现一下功能
+    // 1.  产生5000个（1，9999）之间的随机整数，将其存入文本文件a.txt中
+    // 2. 从文件中独取这5000个整数，并计算其最大值，最小值和平均值并输出结果
 public class E4 {
     public static void main(String[] args) {
     int sum = 0;
