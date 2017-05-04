@@ -95,30 +95,23 @@ public class Human extends Animals {
     }
 }
 class HumanTest{
-
-
-    public static void main(String[] args) throws NoSuchMethodException {
-        Class clazz = Human.class;
-        
-        Constructor[] constructors = clazz.getConstructors();
-        System.out.println("-- getConstructors() ---");
+    public static void main(String[] args) {
+        Class clazz = Human.class;   // 先获取class
+        Constructor[] constructors = clazz.getConstructors(); //获取所有的公有构造方法
+        System.out.println("---getConstructors---");
         for (Constructor constructor : constructors) {
             System.out.println(constructor.getName());
             for (java.lang.reflect.Parameter parameter : constructor.getParameters()) {
-                System.out.println("\t" + parameter.getName());
+                System.out.println("\t" + parameter.getName()); // 输出公有构造方法的元素名称
             }
         }
-        Constructor[] declaredConstructors = clazz.getDeclaredConstructors();
+        Constructor[] constructors1 = clazz.getDeclaredConstructors(); // 获取构造方法
         System.out.println("---getDeclaredConstructors---");
-        for (Constructor declaredConstructor : declaredConstructors) {
-            System.out.println(declaredConstructor.getName());
-            for (java.lang.reflect.Parameter parameter : declaredConstructor.getParameters()) {
-                System.out.println("\t" + parameter.getName());
+        for (Constructor constructor : constructors1) {
+            System.out.println(constructor.getName());
+            for (java.lang.reflect.Parameter parameter : constructor.getParameters()) {
+                System.out.println("\t" + parameter.getName()); // 输出所有构造方法的元素名称
             }
         }
-
-        Constructor constructor = clazz.getDeclaredConstructor(int.class,double.class,String.class,boolean.class);
-        System.out.println(constructor.getName());
-
     }
 }
