@@ -94,8 +94,8 @@ public class Human extends Animals {
         this.married = married;
     }
 }
-class HumanTest{
-    public static void main(String[] args) {
+class HumanTest {
+    public static void main(String[] args) throws NoSuchMethodException {
         Class clazz = Human.class;   // 先获取class
         Constructor[] constructors = clazz.getConstructors(); //获取所有的公有构造方法
         System.out.println("---getConstructors---");
@@ -112,6 +112,11 @@ class HumanTest{
             for (java.lang.reflect.Parameter parameter : constructor.getParameters()) {
                 System.out.println("\t" + parameter.getName()); // 输出所有构造方法的元素名称
             }
+        }
+        Constructor constructor = clazz.getDeclaredConstructor(int.class,double.class,String.class,boolean.class);
+        System.out.println(constructor.getName());  // 获取一个构造方法
+        for (java.lang.reflect.Parameter parameter : constructor.getParameters()) {
+            System.out.println(parameter);  // 再获取这个构造方法的所有参数
         }
     }
 }
