@@ -13,16 +13,18 @@ import java.net.URL;
  */
 // 读取输入流再写入本地文件
 public class Download {
-    private static final String IMAGE_URL="";
+    private static final String IMAGE_URL = "http://s.cn.bing.net/th?id=OJ.58V1JdyCq3tEwg&pid=MSNJVFeeds/1.2.tif";
 
     public static void main(String[] args) {
         try {
             URL url = new URL(IMAGE_URL);
-            try (InputStream inputStream = url.openStream();
-                OutputStream outputStream = new FileOutputStream("test.png");)
-            {
+            try (
+                    InputStream inputStream = url.openStream();
+                    OutputStream outputStream = new FileOutputStream("test.png")
+            ) {
+                System.out.println(inputStream.available());
                 int i;
-                while((i=inputStream.read())!= -1){
+                while ((i = inputStream.read()) != -1) {
                     outputStream.write(i);
                 }
             } catch (IOException e) {
