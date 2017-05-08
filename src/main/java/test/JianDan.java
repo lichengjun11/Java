@@ -9,16 +9,18 @@ import java.net.URL;
  * on 2017/5/7 20:46.
  */
 public class JianDan {
-    private static final String JIANDAN_URL = "http://jandan.net/tag/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD";
     private static int counter;
     public static void main(String[] args) {
         try {
-            URL url = new URL(JIANDAN_URL);
+            URL url = new URL("http://jandan.net/tag/%E6%95%B0%E7%A0%81%E4%BA%A7%E5%93%81");
             try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()))) {
            String line;
            while((line = bufferedReader.readLine()) != null){
                if(line.contains("data-original")){
                    String imageURL = line.substring(line.indexOf("//tankr"),line.indexOf("jpg")+3);
+                   if (!imageURL.startsWith("http")) {
+                       imageURL = "http:" + imageURL;
+                   }
                    download(imageURL);
 //                   System.out.println(imageURL);
                }
@@ -34,9 +36,10 @@ public class JianDan {
     }
     public static void download(String imageUrl){
         try{
-            URL url1 = new URL(imageUrl);//  inputstream是url取得的
+            URL url = new URL(imageUrl);//  inputstream是url取得的
 
-            try(BufferedInputStream in = new BufferedInputStream(url1.openStream());
+            try(
+                    BufferedInputStream in = new BufferedInputStream(url.openStream());
                 BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream("images/" + (++counter)+"jpg")))
             {
                 int i;
