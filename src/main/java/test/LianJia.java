@@ -11,8 +11,9 @@ import java.net.URL;
  * Created by Li chengjun
  * on 2017/5/6 9:49.
  */
+//  抓取网页源代码
 public class LianJia {
-    private static final String BAIDU_URL = "https://www.baidu.com/";
+    private static final String BAIDU_URL = "http://bj.lianjia.com/ershoufang/";
 
     public static void main(String[] args) throws MalformedURLException {
         URL url = new URL(BAIDU_URL);
