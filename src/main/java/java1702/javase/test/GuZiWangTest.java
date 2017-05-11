@@ -18,8 +18,10 @@ public class GuZiWangTest {
     private static int counter;
 
     public static void main(String[] args) {
+
+
         for (int i = 0; i < 8; i++) {
-            System.out.println("page:" + (i + 1) );
+//            System.out.println("page:" + (i + 1) );
             try {
                 page(i + 1);
             } catch (IOException e) {
@@ -32,14 +34,18 @@ public class GuZiWangTest {
 
         Document document = Jsoup.connect(url).get();
         Elements elements = document.select("div[class=list-infoBox]");
+        Elements elements1 = document.select("div[class=filterBox]");
+            for (Element element : elements1) {
+                String chexing = element.select("dl[class=fliter-bd clearfix]").text();
+            }
         for (Element element : elements) {
             String s = element.select("p[class=infoBox]").first().text();
             String jiage = element.select("i[class=fc-org priType]").first().text();
             String tupian = element.select("img[src]").attr("src");
 //            System.out.println("车型：   " + s + "   价格：    " + jiage);
 //            System.out.println(tupian);
-            writer.write("车型：   " + s + "   价格：    " + jiage + "\n");
-            System.out.println("\t" + "counter:"+ ++counter);
+//            writer.write("车型：   " + s + "   价格：    " + jiage + "\n");
+//            System.out.println("\t" + "counter:"+ ++counter);
         }
         }
     }
