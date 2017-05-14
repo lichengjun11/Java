@@ -6,24 +6,22 @@ package java1702.javase.multithreafing;
  */
 public class YieldTest implements Runnable{
     public static void main(String[] args) {
-    Thread thread1 = new Thread(new YieldTest(),"thread1");
-    Thread thread2 = new Thread(new YieldTest(),"thread2");
-
+        Thread thread = new Thread(new YieldTest(),"t1");
+        Thread thread1 = new Thread(new YieldTest(),"t2");
+        thread.start();
         thread1.start();
-        thread2.start();
-        System.out.println("Hello");
+        System.out.println("test");
     }
-
-
 
 
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            System.out.println(i + Thread.currentThread().getName() + "is running....");
-            if (i % 10 == 0) {
-                Thread.yield();   //  让步
+            System.out.println(i + ":"+ Thread.currentThread().getName());
+            if (i % 20 ==0) {
+                Thread.yield();
             }
         }
+
     }
 }
