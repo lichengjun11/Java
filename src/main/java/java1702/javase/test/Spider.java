@@ -41,8 +41,8 @@ public class Spider implements Runnable {
         int totalHouses = Integer.parseInt(areaDocument.select("h2[class*=total]").first().child(0).text());
         int pages = (int)Math.ceil(totalHouses/30d);
         for(int i = 0; i < pages;i++){
-            page(areaName,i+1);
-            System.out.println(areaName+"\t\tpage:"+(i+1));
+//            page(areaName,i+1);
+            System.out.println(areaName+"\tpage:"+(i+1));
         }
 
     } catch (IOException e) {
@@ -50,7 +50,7 @@ public class Spider implements Runnable {
     }
     }
     private static void page(String areaName,int page){
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter("data/bj/"+areaName,true))){
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter("data/new/"+areaName,true))){
             Document document = Jsoup.connect(URL.concat(areaName)+"/pg"+page).cookie("lianjia_uuid", "5a83ce81-c81e-47ec-b412-e4b6ffba4151").get();
             Elements elements = document.select("li[class=clear]");
             for (Element element : elements) {
@@ -59,9 +59,9 @@ public class Spider implements Runnable {
                 String region = element.select("a[data-el=region]").first().text();
                 String totalPrice = element.select("div[class=totalPrice]").first().child(0).text();
                 Element houseInfoElement = element.select("div[class=houseInfo]").first();
-                String houseInfo = houseInfoElement.childNode(2).toString();
+                String houseInfo = houseInfoElement.childNode(2).toString();  //?  【】
                 String unitPrice = element.select("div[class=unitPrice]").first().attr("data-price");
-                writer.write(id + "@" + region + "@" + houseInfo + "@" + totalPrice + "@" + unitPrice + "\n");
+//                writer.write(id + "@" + region + "@" + houseInfo + "@" + totalPrice + "@" + unitPrice + "\n");
             }
 
         } catch(SocketTimeoutException e){
